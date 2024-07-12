@@ -100,34 +100,37 @@
 
     <!-- JavaScript for form submission -->
     <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the form from submitting
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting
 
-            var formData = new FormData(this);
+        var formData = new FormData(this);
 
-            // Example: Validate fields
-            var topic = formData.get("topic");
-            var message = formData.get("message");
+        // Example: Validate fields (you can add more complex validation here)
+        var topic = formData.get("topic");
+        var message = formData.get("message");
 
-            if (!topic.trim() || !message.trim()) {
-                alert("Please fill in all fields.");
-                return;
-            }
+        if (!topic.trim() || !message.trim()) {
+            alert("Please fill in all fields.");
+            return;
+        }
 
-            // Example: Submit the form via fetch API (you will replace this with actual email sending logic)
-            fetch('https://example.com/send-email', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById("response").innerText = data.message;
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+        // Example: Submit the form via fetch API (you will replace this with actual email sending logic)
+        fetch('https://example.com/send-email', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("response").innerText = data.message;
+            // Clear form fields after successful submission
+            document.getElementById("contactForm").reset(); // Reset the form
+        })
+        .catch(error => {
+            console.error('Error:', error);
         });
-    </script>
+    });
+</script>
+
 
 </body>
 </html>
