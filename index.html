@@ -85,7 +85,20 @@
             <p>&copy; 2024 Ignacio Rodriguez</p>
         </div>
     </footer>
+    <!-- Custom cursor -->
+    <div class="cursor">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 0l-6 6h4v12h4V6h4l-6-6z"/>
+        </svg>
+    </div>
 
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const cursor = document.querySelector('.cursor');
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        });
+    </script>
 
 </body>
 </html>
