@@ -1,65 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ignacio Rodriguez</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+
+    <!-- Inline JavaScript for current date display -->
     <script language="JavaScript"><!--
         var hoy = new Date();
-        dia = hoy.getDate();
-        mes = hoy.getMonth();
-        ano = hoy.getFullYear();
-        if (mes == "0") nombremes = "<font size=3>Enero</font>";
-        	else if (mes == "1") nombremes = "<font size=3>Febrero</font>";
-        	else if (mes == "2") nombremes = "<font SIZE=3>Marzo</font>";
-        	else if (mes == "3") nombremes = "<font SIZE=3>Abril</font>";
-        	else if (mes == "4") nombremes = "<font SIZE=3>Mayo</font>";
-        	else if (mes == "5") nombremes = "<font SIZE=3>Junio</font>";
-        	else if (mes == "6") nombremes = "<font SIZE=3>Julio</font>";
-        	else if (mes == "7") nombremes = "<font SIZE=3>Agosto</font>";
-        	else if (mes == "8") nombremes = "<font SIZE=3>Septiembre</font>";
-        	else if (mes == "9") nombremes = "<font SIZE=3>Octubre</font>";
-        	else if (mes == "10") nombremes = "<font SIZE=3>Noviembre</font>";
-        	else nombremes = "<font SIZE=3>Diciembre</font>";
-        document.write (dia);
-        document.write (" de ");
-        document.write (nombremes);
-        document.write (" del ");
-        document.write (ano);
-// --></script>
-    <!-- JavaScript for form submission -->
-<script>
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the form from submitting
+        var dia = hoy.getDate();
+        var mes = hoy.getMonth();
+        var ano = hoy.getFullYear();
+        var nombremes;
 
-        var formData = new FormData(this);
+        if (mes == 0) nombremes = "Enero";
+        else if (mes == 1) nombremes = "Febrero";
+        else if (mes == 2) nombremes = "Marzo";
+        else if (mes == 3) nombremes = "Abril";
+        else if (mes == 4) nombremes = "Mayo";
+        else if (mes == 5) nombremes = "Junio";
+        else if (mes == 6) nombremes = "Julio";
+        else if (mes == 7) nombremes = "Agosto";
+        else if (mes == 8) nombremes = "Septiembre";
+        else if (mes == 9) nombremes = "Octubre";
+        else if (mes == 10) nombremes = "Noviembre";
+        else nombremes = "Diciembre";
 
-        // You can add client-side validation here if needed
+        document.write(dia + " de " + nombremes + " del " + ano);
+    // --></script>
 
-        // Example: Validate fields
-        var topic = formData.get("topic");
-        var message = formData.get("message");
-
-        if (!topic.trim() || !message.trim()) {
-            alert("Please fill in all fields.");
-            return;
-        }
-
-        // Example: Submit the form via fetch API (you will replace this with actual email sending logic)
-        fetch('https://example.com/send-email', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("response").innerText = data.message;
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    });
-</script>
 </head>
 <body>
     <header>
@@ -76,7 +46,7 @@
     <section id="home">
         <div class="container">
             <h1>Welcome to Your Page</h1>
-            <p>Soy Ignacio Rodríguez Via-Dufresne, uan persona entusiasta y proactiva.</p>
+            <p>Soy Ignacio Rodríguez Via-Dufresne, una persona entusiasta y proactiva.</p>
         </div>
     </section>
 
@@ -104,18 +74,60 @@
     <section id="contact">
         <div class="container">
             <h2>Contact</h2>
-            <p>Telefono: +34684040203
-                correo: nachorvd02@gmail.com
-                Viva.</p>
+            <p>Teléfono: +34684040203<br>
+                Correo: nachorvd02@gmail.com<br>
+                ¡Viva!</p>
+
+            <h3>Send me a message:</h3>
+            <form id="contactForm">
+                <label for="topic">Subject:</label>
+                <input type="text" id="topic" name="topic" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="response"></div> <!-- Display server response here -->
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Your Name</p>
+            <p>&copy; 2024 Ignacio Rodriguez</p>
         </div>
     </footer>
 
+    <!-- JavaScript for form submission -->
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            var formData = new FormData(this);
+
+            // Example: Validate fields
+            var topic = formData.get("topic");
+            var message = formData.get("message");
+
+            if (!topic.trim() || !message.trim()) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Example: Submit the form via fetch API (you will replace this with actual email sending logic)
+            fetch('https://example.com/send-email', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("response").innerText = data.message;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
 
 </body>
 </html>
