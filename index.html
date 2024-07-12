@@ -28,7 +28,38 @@
         document.write (" del ");
         document.write (ano);
 // --></script>
+    <!-- JavaScript for form submission -->
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting
 
+        var formData = new FormData(this);
+
+        // You can add client-side validation here if needed
+
+        // Example: Validate fields
+        var topic = formData.get("topic");
+        var message = formData.get("message");
+
+        if (!topic.trim() || !message.trim()) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Example: Submit the form via fetch API (you will replace this with actual email sending logic)
+        fetch('https://example.com/send-email', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("response").innerText = data.message;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+</script>
 </head>
 <body>
     <header>
@@ -84,38 +115,7 @@
             <p>&copy; 2024 Your Name</p>
         </div>
     </footer>
-    <!-- JavaScript for form submission -->
-<script>
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the form from submitting
 
-        var formData = new FormData(this);
-
-        // You can add client-side validation here if needed
-
-        // Example: Validate fields
-        var topic = formData.get("topic");
-        var message = formData.get("message");
-
-        if (!topic.trim() || !message.trim()) {
-            alert("Please fill in all fields.");
-            return;
-        }
-
-        // Example: Submit the form via fetch API (you will replace this with actual email sending logic)
-        fetch('https://example.com/send-email', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("response").innerText = data.message;
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    });
-</script>
 
 </body>
 </html>
