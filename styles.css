@@ -55,7 +55,10 @@ section {
     width: 100%;
     height: auto;
 }
-
+#contact {
+    /* Example: Ensure it's not pushed down */
+    padding: 20px;
+}
 footer {
     background-color: #333;
     color: #fff;
