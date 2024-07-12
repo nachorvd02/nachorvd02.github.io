@@ -77,18 +77,6 @@
             <p>Teléfono: <strong>+34684040203</strong><br>
                 Correo: <strong>nachorvd02@gmail.com</strong><br>
                 ¡Viva!</p>
-
-            <h3>Send me a message:</h3>
-            <form id="contactForm" action="send-email.php" method="POST">
-                <label for="topic">Asunto:</label>
-                <input type="text" id="topic" name="topic" required>
-
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-            <div id="response"></div> <!-- Display server response here -->
         </div>
     </section>
 
@@ -97,39 +85,6 @@
             <p>&copy; 2024 Ignacio Rodriguez</p>
         </div>
     </footer>
-
-    <!-- JavaScript for form submission -->
-    <script>
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the form from submitting
-
-        var formData = new FormData(this);
-
-        // Example: Validate fields (you can add more complex validation here)
-        var topic = formData.get("topic");
-        var message = formData.get("message");
-
-        if (!topic.trim() || !message.trim()) {
-            alert("Please fill in all fields.");
-            return;
-        }
-
-        // Example: Submit the form via fetch API (you will replace this with actual email sending logic)
-        fetch('https://example.com/send-email', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("response").innerText = data.message;
-            // Clear form fields after successful submission
-            document.getElementById("contactForm").reset(); // Reset the form
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    });
-</script>
 
 
 </body>
