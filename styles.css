@@ -60,40 +60,9 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1em 0;
-    position: absolute;
+    padding: 10px 0;
+    position: fixed;
     width: 100%;
     bottom: 0;
-}
-/* styles.css */
-
-/* Estilos para el formulario de contacto */
-form#contactForm {
-    margin-bottom: 20px; /* Espacio debajo del formulario */
-}
-
-/* Estilo para el campo de asunto */
-form#contactForm label[for="topic"] {
-    display: block; /* Hacer que el label sea un bloque */
-    margin-bottom: 10px; /* Espacio inferior entre el label y el input */
-}
-
-form#contactForm input[type="text"], 
-form#contactForm textarea {
-    width: 100%; /* Ancho completo */
-    padding: 8px; /* Espaciado interno */
-    margin-bottom: 10px; /* Espacio inferior */
-}
-
-form#contactForm button[type="submit"] {
-    background-color: #4CAF50; /* Color de fondo */
-    color: white; /* Color de texto */
-    padding: 10px 20px; /* Espaciado interno */
-    border: none; /* Sin borde */
-    cursor: pointer; /* Cursor apuntando */
-}
-
-form#contactForm button[type="submit"]:hover {
-    background-color: #45a049; /* Color de fondo al pasar el ratón */
 }
 
