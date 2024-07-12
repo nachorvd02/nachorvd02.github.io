@@ -105,6 +105,20 @@
             const cursor = document.querySelector('.cursor');
             cursor.style.left = e.pageX + 'px';
             cursor.style.top = e.pageY + 'px';
+
+            // Detect background color and change cursor color accordingly
+            const element = document.elementFromPoint(e.clientX, e.clientY);
+            const bgColor = window.getComputedStyle(element).backgroundColor;
+            
+            if (bgColor === 'rgb(0, 0, 0)' || bgColor === 'rgba(0, 0, 0, 1)') {
+                cursor.querySelector('svg').style.fill = '#999999'; // Gray color
+            } else {
+                cursor.querySelector('svg').style.fill = '#000000'; // Black color
+            }
+        });
+
+        document.querySelectorAll('a').forEach(link => {
+            link.style.cursor = 'none'; // Ensure the custom cursor is applied to links
         });
     </script>
 </body>
