@@ -57,7 +57,8 @@ section {
 }
 #contact {
     /* Example: Ensure it's not pushed down */
-    padding: 20px;
+    padding: 4em 0;
+    margin-bottom: 100px; /* Ensure space between contact and footer */
 }
 footer {
     background-color: #333;
