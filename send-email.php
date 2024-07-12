@@ -5,13 +5,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST['message'];
 
     // Set up email parameters
-    $to = 'yourgmail@gmail.com'; // Replace with your Gmail address
+    $to = 'nachorvd02@gmail.com'; // Replace with your Gmail address
     $subject = 'Message from Contact Form';
     $body = "Topic: $topic\n\nMessage:\n$message";
 
     // Set headers
-    $headers = "From: contact@yourwebsite.com"; // Replace with your website's email address
-    $headers .= "\r\nReply-To: contact@yourwebsite.com"; // Replace with your website's email address
+    $headers = "From: contact@nachorvd02.github.io"; // Replace with your website's email address
+    $headers .= "\r\nReply-To: contact@nachorvd02.github.io"; // Replace with your website's email address
 
     // Send email
     if (mail($to, $subject, $body, $headers)) {
