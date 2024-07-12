@@ -5,7 +5,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
+    cursor: none; /* Oculta el cursor por defecto */
 }
+
 .cursor {
     position: fixed;
     z-index: 10000;
@@ -18,8 +20,9 @@ body {
 .cursor svg {
     width: 100%;
     height: 100%;
-    fill: black; /* Adjust fill color as needed */
+    fill: black; /* Ajusta el color del icono */
 }
+
 header {
     background-color: #333;
     color: #fff;
@@ -68,11 +71,12 @@ section {
     width: 100%;
     height: auto;
 }
+
 #contact {
-    /* Example: Ensure it's not pushed down */
     padding: 4em 0;
     margin-bottom: 100px; /* Ensure space between contact and footer */
 }
+
 footer {
     background-color: #333;
     color: #fff;
@@ -82,4 +86,3 @@ footer {
     width: 100%;
     bottom: 0;
 }
-
