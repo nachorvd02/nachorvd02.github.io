@@ -1,4 +1,4 @@
-<!-- gps-arrow.svg -->
+<!-- custom-cursor.svg -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-  <path d="M12 0l-6 6h4v12h4V6h4l-6-6z"/>
+  <path d="M12 0 L6 24 L18 24 Z" stroke="black" stroke-width="3" fill="transparent"/>
 </svg>
