@@ -6,7 +6,20 @@ body {
     padding: 0;
     background-color: #f0f0f0;
 }
+.cursor {
+    position: fixed;
+    z-index: 10000;
+    pointer-events: none;
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%);
+}
 
+.cursor svg {
+    width: 100%;
+    height: 100%;
+    fill: black; /* Adjust fill color as needed */
+}
 header {
     background-color: #333;
     color: #fff;
