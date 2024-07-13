@@ -72,7 +72,4 @@ footer {
     bottom: 0;
 }
 
-/* Ensure custom cursor is applied to links */
-a {
-    cursor: none;
-}
+
