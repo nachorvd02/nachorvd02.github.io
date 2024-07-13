@@ -11,17 +11,14 @@ header {
     background-color: #333;
     color: #fff;
     padding: 1em 0;
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 header nav {
-    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Ajustar el ancho del nav según sea necesario */
+    margin: auto; /* Centrar el nav */
 }
 
 header nav ul {
@@ -29,8 +26,6 @@ header nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    width: 100%;
-    justify-content: space-between;
 }
 
 header nav ul li {
@@ -38,16 +33,15 @@ header nav ul li {
 }
 
 header nav ul li.left {
-    align-self: flex-start;
+    margin-right: auto; /* Mover hacia la izquierda */
 }
 
 header nav ul li.center {
-    margin: 0 auto;
-    align-self: center;
+    margin: 0 10px; /* Espacio alrededor de los elementos centrados */
 }
 
 header nav ul li.right {
-    align-self: flex-end;
+    margin-left: auto; /* Mover hacia la derecha */
 }
 
 header nav ul li a {
@@ -84,7 +78,7 @@ section {
 
 #contact {
     padding: 4em 0;
-    margin-bottom: 100px; /* Ensure space between contact and footer */
+    margin-bottom: 100px; /* Espacio entre contact y footer */
 }
 
 footer {
