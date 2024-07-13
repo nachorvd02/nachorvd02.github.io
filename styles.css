@@ -8,21 +8,6 @@ body {
     cursor: none; /* Oculta el cursor por defecto */
 }
 
-.cursor {
-    position: fixed;
-    z-index: 10000;
-    pointer-events: none;
-    width: 24px;
-    height: 24px;
-    transform: translate(-50%, -50%);
-}
-
-.cursor svg {
-    width: 100%;
-    height: 100%;
-    fill: #000000; /* Color inicial del cursor */
-}
-
 header {
     background-color: #333;
     color: #fff;
