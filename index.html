@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ignacio Rodriguez</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
 <body>
     <header>
@@ -36,13 +37,11 @@
         <div class="container">
             <h2>Portfolio</h2>
             <div class="portfolio-items">
-                <!-- Your portfolio items (projects) -->
                 <div class="portfolio-item">
                     <img src="path/to/your/image.jpg" alt="Project Title">
                     <h3>Project Title</h3>
                     <p>Description of the project.</p>
                 </div>
-                <!-- Link to download the PDF -->
                 <div class="portfolio-item">
                     <a href="path/to/your/curriculum.pdf" target="_blank">Descargar Currículum</a>
                 </div>
@@ -62,12 +61,11 @@
     <footer>
         <div class="container">
             <p>&copy; 2024 Ignacio Rodriguez</p>
-            <p id="fecha"></p> <!-- Contenedor para la fecha -->
+            <p id="fecha"></p>
         </div>
     </footer>
 
-    <!-- Inline JavaScript for current date display -->
-    <script language="JavaScript">
+    <script>
         var hoy = new Date();
         var dia = hoy.getDate();
         var mes = hoy.getMonth();
@@ -88,6 +86,23 @@
         else nombremes = "Diciembre";
 
         document.getElementById('fecha').innerHTML = dia + " de " + nombremes + " del " + ano;
+    </script>
+
+    <script>
+        // GSAP animation for sections
+        gsap.from("section", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: "section",
+                start: "top 80%",
+                end: "bottom 20%",
+                toggleActions: "play none none none",
+                markers: true // Remove this line to hide markers
+            }
+        });
     </script>
 </body>
 </html>
