@@ -34,8 +34,14 @@ header nav ul li.left {
     margin-right: auto; /* Mover hacia la izquierda */
 }
 
-header nav ul li.center {
-    margin: 0 10px; /* Espacio alrededor de los elementos centrados */
+header nav ul li.left-center {
+    margin-right: auto; /* Mover hacia la izquierda */
+    margin-left: auto; /* Mover hacia el centro */
+}
+
+header nav ul li.right-center {
+    margin-left: auto; /* Mover hacia el centro */
+    margin-right: auto; /* Mover hacia la derecha */
 }
 
 header nav ul li.right {
