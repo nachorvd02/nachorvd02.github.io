@@ -4,6 +4,30 @@ iframe {
     height: 550px; /* Esto permite que la altura se ajuste automáticamente al contenido */
     max-height: 600px; /* Establece una altura máxima para el iframe si es necesario */
 }
+/* Añade estilos para el enlace al currículum en dispositivos móviles */
+.curriculum-link {
+    display: none; /* Por defecto ocultar en dispositivos de escritorio */
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    /* Mostrar enlace al currículum solo en dispositivos móviles */
+    .curriculum-link {
+        display: inline-block;
+    }
+    
+    /* Ocultar el contenedor de iframe en dispositivos móviles */
+    .curriculum-embed {
+        display: none;
+    }
+}
+
 
 body {
     font-family: Arial, sans-serif;
