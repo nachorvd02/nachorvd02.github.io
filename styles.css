@@ -1,7 +1,7 @@
 /* styles.css */
 iframe {
     width: 100%;
-    height: 550px; /* Esto permite que la altura se ajuste automáticamente al contenido */
+    height: 500px; /* Esto permite que la altura se ajuste automáticamente al contenido */
     max-height: 600px; /* Establece una altura máxima para el iframe si es necesario */
 }
 /* Añade estilos para el enlace al currículum en dispositivos móviles */
