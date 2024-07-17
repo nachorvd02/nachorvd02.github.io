@@ -79,11 +79,7 @@ section {
     width: 100%;
     height: auto;
 }
-iframe {
-    width: 100%;
-    height: auto; /* Esto permite que la altura se ajuste automáticamente al contenido */
-    max-height: 1000px; /* Establece una altura máxima para el iframe si es necesario */
-}
+
 
 
 #contact {
