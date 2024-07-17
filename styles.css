@@ -7,12 +7,12 @@ iframe {
 /* Añade estilos para el enlace al currículum en dispositivos móviles */
 .curriculum-link {
     display: none; /* Por defecto ocultar en dispositivos de escritorio */
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
+    padding: 10px 20px; /*Tamaño del botón*/
+    background-color: #333; /*Color de fondo*/
+    color: #fff; /*Color de texto*/
+    text-decoration: none; /Sin subrayado*
     text-align: center;
-    border-radius: 5px;
+    border-radius: 5px; /*Bordes redondeados*/
     transition: background-color 0.3s ease;
 }
 
