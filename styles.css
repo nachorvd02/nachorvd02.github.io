@@ -1,4 +1,10 @@
 /* styles.css */
+iframe {
+    width: 100%;
+    height: auto; /* Esto permite que la altura se ajuste automáticamente al contenido */
+    max-height: 600px; /* Establece una altura máxima para el iframe si es necesario */
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
