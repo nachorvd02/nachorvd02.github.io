@@ -47,9 +47,14 @@
                         During this internship, I have gained valuable experience and learned significantly about web hacking and best practices in cybersecurity.</p>
                 </div>
                 <div class="portfolio-item">
-                    <iframe src="Curriculum_Ignacio_Rodriguez_tech.pdf" width="100%" frameborder="0">
-                            <a href="Curriculum_Ignacio_Rodriguez_tech.pdf" target="_blank">Descargar Currículum</a>
-                    </iframe>
+                    <!-- Enlace al currículum en dispositivos móviles -->
+                    <a href="Curriculum_Ignacio_Rodriguez_tech.pdf" target="_blank" class="curriculum-link">Currículum Ignacio Rodríguez</a>
+                    <!-- Contenedor para mostrar el currículum en dispositivos de escritorio -->
+                    <div class="curriculum-embed">
+                        <iframe src="Curriculum_Ignacio_Rodriguez_tech.pdf" width="100%" frameborder="0">
+                                <a href="Curriculum_Ignacio_Rodriguez_tech.pdf" target="_blank">Descargar Currículum</a>
+                        </iframe>
+                    </div>   
                 </div>
                  <div class="portfolio-item">
                     <h3>Software Skills</h3>
@@ -120,6 +125,27 @@
                 end: "bottom 20%",
                 toggleActions: "play none none none",
                 markers: false // Remove this line to hide markers
+            }
+        });
+    </script>
+    <script>
+        // Detectar si el dispositivo es móvil
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Obtener elementos del DOM
+            var curriculumEmbed = document.querySelector('.curriculum-embed');
+            var curriculumLink = document.querySelector('.curriculum-link');
+
+            // Mostrar iframe si no es dispositivo móvil, o mostrar enlace directo si es móvil
+            if (isMobileDevice()) {
+                curriculumEmbed.style.display = 'none'; // Ocultar iframe en dispositivos móviles
+                curriculumLink.style.display = 'inline-block'; // Mostrar enlace directo en dispositivos móviles
+            } else {
+                curriculumEmbed.style.display = 'block'; // Mostrar iframe en dispositivos de escritorio
+                curriculumLink.style.display = 'none'; // Ocultar enlace directo en dispositivos de escritorio
             }
         });
     </script>
