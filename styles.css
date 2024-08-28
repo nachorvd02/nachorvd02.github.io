@@ -82,6 +82,12 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+.header_image{
+	cursor: pointer;
+	height: 85%;
+	border-radius: 50%;
+	margin: auto 0px auto 10px;
+}
 
 section {
     padding: 4em 0;
