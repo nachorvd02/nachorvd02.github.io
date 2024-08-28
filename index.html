@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- page tags -->
+		<meta property="og:title" content="Ignacio Rodríguez Via-Dufresne">
+		<meta name="description" content="Página web personal">
+		<meta property="og:description" content="Página web personal">
+		<meta property="og:url" content="https://nachorvd02.github.io">
     <title>Ignacio Rodriguez</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
@@ -22,8 +28,9 @@
 
     <section id="home">
         <div class="container">
-            <h1>Welcome to Your Page</h1>
+            <h1>Welcome to my Page</h1>
             <p>Soy Ignacio Rodríguez Via-Dufresne, una persona entusiasta y proactiva.</p>
+            <a class="button_to_page reduce_top_margin_05em" href="/pages/voluntariado.html">Go there >></a>
         </div>
     </section>
 
@@ -150,4 +157,10 @@
         });
     </script>
 </body>
+    <script> 
+		$(function(){
+			$("header").load("/commons/header_content.html"); 
+			$("footer").load("/commons/footer_content.html"); 
+		});
+	</script>
 </html>
