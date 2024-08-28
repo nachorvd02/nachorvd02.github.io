@@ -122,6 +122,10 @@ section {
     padding: 4em 0;
     margin-bottom: 100px; /* Espacio entre contact y footer */
 }
+.social_network_img{
+	width: 30px;
+	height: 30px;
+}
 
 footer {
     background-color: #333;
