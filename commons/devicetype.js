@@ -6,7 +6,7 @@ function form_factor_specific_actions(){
 	if (["smartphone","tablet", "feature phone", "other mobile"].includes(form_factor.toLowerCase())){
 		var link  = document.createElement('link');
 		link.rel  = 'stylesheet';
-		link.href = '/styles/phone_and_tablet.css';
+		link.href = '/styles/phone.css';
 		document.getElementsByTagName('head')[0].appendChild(link);
 	}
 	/*elif (["desktop","other non-mobile", "smart-tv"].includes(form_factor.toLowerCase())){
