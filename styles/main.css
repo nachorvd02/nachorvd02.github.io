@@ -102,8 +102,9 @@ section {
 
 .portfolio-items {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px; /* Añadido para espacio entre columnas */
 }
 
 .portfolio-item {
