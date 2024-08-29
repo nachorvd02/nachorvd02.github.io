@@ -107,7 +107,7 @@ section {
 
 .portfolio-items {
     display: flex;
-    flex-directions: column;  /* Muestra los elementos en una columna */
+    flex-direction: column;  /* Muestra los elementos en una columna */
     align-items: center; /* Centra los elementos horizontalmente */
     /*justify-content: space-around;
     flex-wrap: wrap;*/
