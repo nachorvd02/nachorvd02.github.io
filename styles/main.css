@@ -143,6 +143,7 @@ section {
 .social_network_img{
 	width: 30px;
 	height: 30px;
+	margin-right: 10px; /* Ajusta el espacio entre las imágenes */
 }
 
 footer {
