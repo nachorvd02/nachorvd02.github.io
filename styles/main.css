@@ -116,7 +116,24 @@ section {
     height: auto;
 }
 
+/* Contenedor para Contacto y Voluntariado en la misma fila */
+.contact-voluntariado-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
 
+.contact-voluntariado-wrapper section {
+    width: 48%; /* Ajusta el ancho de cada sección para que ocupen la mitad del espacio */
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .contact-voluntariado-wrapper section {
+        width: 100%; /* Para dispositivos móviles, hacer que ocupen todo el ancho */
+    }
+}
 
 #contact {
     padding: 4em 0;
