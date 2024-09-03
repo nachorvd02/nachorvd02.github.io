@@ -112,17 +112,13 @@ section {
     margin-bottom: 20px;
 }
 
-/*.portfolio-item img {
-    width: 100%;
+.portfolio-item img {
+    width: 50%;
     height: auto;
-}*/
-/* Específicamente para la imagen de planeta */
-.portfolio-item img[src="images/planeta.jpg"] {
-    width: 50%; /* Cambia este valor para ajustar el tamaño de la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin: 0 auto; /* Centra la imagen dentro de su contenedor */
-    display: block; /* Asegura que se aplique el centrado */
+    margin: 0 auto;
+    display: block;
 }
+
 
 
 /* Contenedor para Contacto y Voluntariado en la misma fila */
